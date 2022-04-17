@@ -1,12 +1,20 @@
 import React from "react";
 import { User } from "../model/Models";
 import { AuthService } from "../services/AuthService";
+import { Login } from "./Login";
 
-interface AppStat {
+interface AppState {
   user: User | undefined;
 }
-export class App extends React.Component {
+
+export class App extends React.Component<{}, AppState> {
+  private authService: AuthService = new AuthService();
+
   render() {
-    return <h2>Hello</h2>;
+    return (
+      <div>
+        <Login authService={this.authService} />
+      </div>
+    );
   }
 }
