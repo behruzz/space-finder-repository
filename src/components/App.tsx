@@ -6,7 +6,7 @@ interface AppStat {
   user: User | undefined;
 }
 
-export class App extends React.Component {
+export class App extends React.Component<{}, AppStat> {
   private authService: AuthService = new AuthService();
 
   render() {
