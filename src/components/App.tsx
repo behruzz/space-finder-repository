@@ -10,6 +10,6 @@ export class App extends React.Component<{}, AppStat> {
   private authService: AuthService = new AuthService();
 
   render() {
-    return <h2>Hello</h2>;
+    return <h2>Hello App</h2>;
   }
 }
